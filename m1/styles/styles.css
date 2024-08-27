@@ -1,0 +1,239 @@
+/* Global Styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Usar una fuente moderna */
+  margin: 0; /* Eliminar el margen por defecto */
+  padding: 0; /* Eliminar el relleno por defecto */
+  line-height: 1.6; /* Mejora la legibilidad del texto */
+}
+
+/* Header, Nav, Footer */
+header,
+nav,
+footer {
+  background-color: #333; /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Específicos */
+header {
+  top: 0;
+}
+
+nav {
+  top: 60px; /* Ajustado para evitar superposición con el header */
+  background-color: #7f8081; /* Fondo grisáceo para la navegación */
+}
+
+footer {
+  bottom: 0;
+}
+
+/* Typography */
+h1 {
+  font-size: 2rem; /* Tamaño de fuente más grande */
+  margin: 0; /* Eliminar margen por defecto */
+}
+
+/* Navigation Links */
+nav a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 15px;
+  transition: color 0.3s ease; /* Suavizar la transición del color */
+}
+
+nav a:hover {
+  color: #007bff; /* Color de enlace en hover */
+}
+
+/* Lists */
+ul {
+  list-style: none; /* Eliminar viñetas */
+  display: flex;
+  justify-content: center; /* Centrar los elementos */
+  padding: 0;
+  margin: 0;
+}
+
+/* Main Content */
+main {
+  margin-top: 100px; /* Espacio debajo del header fijo */
+  padding: 1rem; /* Espaciado alrededor del contenido */
+}
+
+/* h2 Styling */
+h2 {
+  font-weight: bold; /* Hace el texto en negrita */
+  text-decoration: underline; /* Subraya el texto */
+}
+
+/* Section Styling */
+section {
+  border: 2px solid #ddd; /* Borde más suave */
+  border-radius: 8px; /* Bordes redondeados más grandes */
+  margin: 1rem;
+  padding: 20px;
+  background-color: #f9f9f9; /* Fondo claro */
+  transition: background-color 0.3s ease; /* Transición en cambio de color */
+  text-align: center;
+}
+
+section:hover {
+  background-color: #f1f1f1; /* Fondo más claro al pasar el ratón */
+}
+
+/* Image Styling */
+img {
+  width: 100px; /* Ancho de 100 píxeles */
+  height: 100px; /* Alto de 100 píxeles */
+  border-radius: 8px; /* Bordes redondeados para imágenes */
+  transition: transform 0.3s ease; /* Suavizar la transformación */
+}
+
+img:hover {
+  transform: scale(1.1); /* Ampliar imagen en hover */
+  cursor: pointer;
+}
+
+/* Form Styling */
+/* Estilos del Formulario */
+#form {
+  max-width: 600px; /* Ancho máximo del formulario */
+  margin: 2rem auto; /* Centrar horizontalmente con un margen superior e inferior */
+  padding: 1.5rem; /* Relleno interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #fff; /* Fondo blanco */
+  display: flex; /* Usar Flexbox para alinear elementos */
+  flex-direction: column; /* Colocar elementos en columna */
+  gap: 1rem; /* Espaciado entre elementos */
+}
+
+label {
+  font-weight: bold; /* Texto en negrita para las etiquetas */
+  margin-bottom: 0.5rem; /* Espacio debajo de las etiquetas */
+}
+
+input[type="text"],
+input[type="url"],
+textarea {
+  width: 100%; /* Ancho completo del contenedor */
+  padding: 0.8rem; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde sutil */
+  border-radius: 4px; /* Bordes redondeados */
+  box-sizing: border-box; /* Incluir el relleno y el borde en el ancho total */
+}
+
+textarea::placeholder {
+    color: #888; /* Color del placeholder */
+    font-style: italic; /* Estilo cursiva para el placeholder */
+  }
+
+input[type="submit"] {
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Texto blanco */
+  border: none; /* Eliminar borde */
+  padding: 0.8rem 1.5rem; /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar el cursor a mano al pasar sobre el botón */
+  font-size: 1rem; /* Tamaño de fuente */
+  transition: background-color 0.3s ease; /* Suavizar la transición del color de fondo */
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Color de fondo en hover */
+}
+
+#add {
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Texto blanco en el botón */
+  border: none; /* Eliminar el borde del botón */
+  transition: background-color 0.3s ease; /* Transición en el color de fondo */
+}
+
+#add:hover {
+  background-color: #0056b3; /* Color más oscuro en hover */
+}
+
+/* Activity Card Styling */
+/* Contenedor para las tarjetas de actividad */
+.activity-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilos para las tarjetas individuales */
+activity-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.33% - 20px); /* Ajusta el ancho de las tarjetas */
+    padding: 20px;
+    transition: transform 0.2s ease-in-out;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.activity-card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.activity-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.delete-button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+    background-color: #ff1a1a;
+}
+
+
+/* Footer Styling */
+footer {
+  padding: 15px; /* Espacio interno mayor */
+  background-color: #333; /* Fondo oscuro consistente */
+  color: #fff; /* Color del texto blanco */
+  text-align: center; /* Centrar el texto */
+  bottom: 0; /* Alinear el footer en la parte inferior */
+  left: 0; /* Alinear el footer al borde izquierdo */
+  width: 100%; /* Asegurar que el footer ocupe todo el ancho */
+  z-index: 100; /* Asegurar que el footer esté encima de otros contenidos */
+}
