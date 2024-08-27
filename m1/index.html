@@ -1,11 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/m1/styles/reset.css" />
+    <link rel="stylesheet" href="/m1/styles/styles.css" />
+    <link rel="icon" href="/m1/assets/html5.png" />
+    <title>Portfolio Xavier Sieben</title>
+  </head>
+  <body>
+    <header><h1>Xavier</h1></header>
+    <nav>
+      <ul>
+        <li><a href="#acercaDe">Acerca de mí</a></li>
+        <li><a href="#tecnologias">Tecnologías</a></li>
+        <li><a href="#favActivities">Actividades</a></li>
+        <li><a>LinkedIn</a></li>
+        <li><a>Github</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="acerdaDe">
+        <h2>Acerca de mi</h2>
+        <br />
+        <p>Desde 2020 en búsqueda de trabajo it</p>
+      </section>
+      <section id="tecnologias">
+        <h2>Tecnologías favoritas</h2>
+        <br />
+        <ul>
+          <li>
+            <h3>
+              <a
+                href="https://developer.mozilla.org/es/docs/Web/HTML"
+                target="_blank"
+                >HTML</a
+              >
+            </h3>
+            <img
+              src="/modulo1/PM1-maccari78/assets/images/html_logo.png"
+              alt="HTML_Logo"
+            />
+          </li>
+          <li>
+            <h3>
+              <a
+                href="https://developer.mozilla.org/es/docs/Web/CSS"
+                target="_blank"
+                >CSS</a
+              >
+            </h3>
+            <img
+              src="/modulo1/PM1-maccari78/assets/images/css_logo.png"
+              alt="CSS_Logo"
+            />
+          </li>
+          <li>
+            <h3>
+              <a
+                href="https://developer.mozilla.org/es/docs/Web/JavaScript"
+                target="_blank"
+                >JavaScript</a
+              >
+            </h3>
+            <img
+              src="/modulo1/PM1-maccari78/assets/images/js_logo.png"
+              alt="JavaScript_Logo"
+            />
+          </li>
+        </ul>
+        <h2>Tecnologías que me gustaría aprender</h2>
+        <br />
+        <ul>
+          <li>
+            <h3><a href="https://nextjs.org/" target="_blank">Next.js</a></h3>
+            <img
+              src="/modulo1/PM1-maccari78/assets/images/nextjs_logo.png"
+              alt="NextJS_Logo"
+            />
+          </li>
+          <li>
+            <h3><a href="https://nestjs.com/" target="_blank">Nest.js</a></h3>
+            <img
+              src="/modulo1/PM1-maccari78/assets/images/nestjs_logo.png"
+              alt="NestJS_Logo"
+            />
+          </li>
+        </ul>
+      </section>
+
+      <section id="favActivities">
+        <h2>Mis Actividades Favoritas</h2>
+        <br />
+        <form id="form">
+          <label for="text">Título:</label>
+          <input
+            type="text"
+            id="text"
+            placeholder="Leer"
+            required
+          /><br /><br />
+          <label for="description">Descripción:</label>
+          <textarea
+            id="description"
+            rows="2"
+            placeholder="Me gusta la lectura, en particular el género de misterio"
+            required
+          >
+          </textarea
+          ><br /><br />
+          <label for="imgUrl">URL de la imagen:</label>
+          <input
+            type="url"
+            id="imgUrl"
+            placeholder="https://google.com"
+            required
+          /><br /><br />
+          <input type="submit" value="Enviar" />
+        </form>
+        <br />
+        <div id="activity-container">
+          <ul id="activity-list"></ul>
+        </div>
+        <br />
+      </section>
+    </main>
+
+    <footer>
+      <p>Xavier Sieben 2024</p>
+    </footer>
+
+    <script src=""></script>
+  </body>
 </html>
