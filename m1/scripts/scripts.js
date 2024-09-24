@@ -76,3 +76,5 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
   });
 });
+
+module.exports = { Activity, Repository };
