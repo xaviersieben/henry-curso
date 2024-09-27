@@ -16,7 +16,12 @@ const movieSchema = new Schema({
   rate: {
     type: Number,
     required: true,
-  }
+  },
+  directorRef: {
+    type: Schema.Types.ObjectId,
+    ref: "Director",
+    default: null,
+  },
 });
 
 const Movie = model("Movie", movieSchema);

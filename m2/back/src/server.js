@@ -4,7 +4,8 @@ import morgan from "morgan";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import movieRouter from './routes/movieRouter.js';
+import movieRouter from "./routes/movieRouter.js";
+import directorRouter from "./routes/directorRouter.js";
 
 // Configuración de dotenv para cargar variables de entorno
 dotenv.config();
@@ -28,7 +29,8 @@ app.use(express.json());
 //   res.status(200).json({ message: "¡Hola desde el servidor modernizado!" });
 // });
 
-app.use('/movies', movieRouter);
+app.use("/movies", movieRouter);
+app.use("/director", directorRouter);
 
 // Función para conectar a la base de datos
 async function connectToDatabase() {
