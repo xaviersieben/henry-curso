@@ -1,6 +1,9 @@
 {
     "cSpell.words": [
-        "Inicialización"
+        "asincrónica",
+        "Inicialización",
+        "postgres",
+        "typeorm"
     ],
     "CodeGPT.apiKey": "CodeGPT Plus Beta"
 }
