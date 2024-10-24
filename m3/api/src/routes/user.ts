@@ -1,7 +1,16 @@
 import { Router } from "express";
+import {
+  getAllUsers,
+  getUserWithAppointments,
+  loginUser,
+  registerUser,
+} from "../controllers/userController";
 
 const router = Router();
 
-router.get("/", (req,res,) => {res.json({ message: "anda todo bien" })});
+router.get("/", getAllUsers);
+router.get("/:id", getUserWithAppointments);
+router.post("/register", registerUser);
+router.post("/login", loginUser);
 
 export default router;

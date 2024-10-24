@@ -3,6 +3,10 @@
         "asincrónica",
         "Inicialización",
         "postgres",
+        "reconectar",
+        "reintentar",
+        "Reintento",
+        "testuser",
         "typeorm"
     ],
     "CodeGPT.apiKey": "CodeGPT Plus Beta"

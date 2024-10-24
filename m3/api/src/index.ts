@@ -1,13 +1,17 @@
-import { AppDataSource } from './config/data-source';
-import { PORT } from './config/envs';
-import server from './server';
+import { AppDataSource } from "./config/data-source";
+import { PORT } from "./config/envs";
+import server from "./server";
+import { loadTestAppointment } from "./utils/loadTestAppointment";
+import { loadTestUsers } from "./utils/loadTestUser";
 
-// Función asincrónica para inicializar la base de datos y el servidor
 const startServer = async () => {
   try {
     // Inicializar conexión a la base de datos
     await AppDataSource.initialize();
     console.log("✅ Database connected successfully");
+
+    await loadTestUsers()
+    await loadTestAppointment()
 
     // Iniciar el servidor
     server.listen(PORT, () => {
@@ -15,13 +19,15 @@ const startServer = async () => {
     });
   } catch (error) {
     // Registro estructurado del error
-    console.error("❌ Failed to initialize the application:", error);
+    console.error("❌ Failed to initialize the database:", error);
 
-    // Forzar salida del proceso en caso de error crítico
-    process.exit(1); // Código de salida 1 indica error
+    // Intentar reconectar a la base de datos después de un tiempo
+    setTimeout(async () => {
+      console.log("🔄 Retrying database connection...");
+      await startServer(); // Reintento
+    }, 5000); // Espera de 5 segundos antes de reintentar
   }
 };
 
 // Ejecutar la función de inicio del servidor
 startServer();
-
