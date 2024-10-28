@@ -1,0 +1,15 @@
+.aboutContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.aboutContainer h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.aboutContainer p {
+  font-size: 16px;
+  line-height: 1.5;
+}

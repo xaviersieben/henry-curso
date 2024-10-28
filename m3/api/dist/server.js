@@ -7,10 +7,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const cors_1 = __importDefault(require("cors"));
-// import usersRouter from './routes/users';
-// import appointmentsRouter from './routes/appointments';
 const morgan_1 = __importDefault(require("morgan"));
 const errorHandler_1 = require("./middlewares/errorHandler");
+const index_1 = __importDefault(require("./routes/index"));
 // Cargar configuración del entorno
 dotenv_1.default.config();
 // Crear instancia del servidor
@@ -26,8 +25,7 @@ server.use((0, cors_1.default)(corsOptions));
 server.use(express_1.default.json());
 server.use((0, morgan_1.default)("combined")); // Registrar las solicitudes (útil para debugging y producción)
 // Rutas
-// server.use('/users', usersRouter);
-// server.use('/appointments', appointmentsRouter);
+server.use('/', index_1.default);
 // Manejo de rutas inexistentes
 server.use((req, res, next) => {
     res.status(404).json({ message: "Endpoint not found" });

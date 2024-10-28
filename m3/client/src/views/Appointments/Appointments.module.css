@@ -1,0 +1,45 @@
+.appointment-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.appointment-list > * {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.appointment-list form {
+  display: flex;
+  flex-direction: column;
+}
+
+.appointment-list form input {
+  margin-bottom: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.appointment-list form button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.appointment-list form button:hover {
+  background-color: #0056b3;
+}
+
+.appointment-list p {
+  font-size: 14px;
+}

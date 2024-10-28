@@ -1,0 +1,61 @@
+.navbarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: darkslategray;
+  color: lightcyan;
+}
+
+.logoSection {
+  display: flex;
+  flex-direction: row;
+
+  img {
+    width: 60px;
+    height: 60px;
+    padding: 20px 0 20px 40px;
+  }
+}
+
+.linksSection {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-bottom: 40px;
+  gap: 2em;
+  font-size: 1.3em;
+  color: cadetblue;
+  text-shadow: 2px 2px 4px black;
+
+  span:hover {
+    color: white;
+    cursor: pointer;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.authLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-bottom: 40px;
+  padding-right: 60px;
+  gap: 2em;
+  font-size: 1.3em;
+  color: cadetblue;
+  text-shadow: 2px 2px 4px black;
+
+  span:hover {
+    color: white;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,43 @@
+.registerCard {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.registerCard h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.registerCard form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registerCard form input {
+  margin-bottom: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.registerCard form button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.registerCard form button:hover {
+  background-color: #0056b3;
+}
+
+.registerCard p {
+  font-size: 14px;
+}

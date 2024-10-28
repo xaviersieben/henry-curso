@@ -1,0 +1,26 @@
+.contactContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contactContainer h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.contactContainer p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.contactContainer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.contactContainer ul li {
+  margin-bottom: 8px;
+}
+
+/* Agrega estilos adicionales según sea necesario */

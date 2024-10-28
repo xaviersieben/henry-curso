@@ -1,0 +1,15 @@
+.imgtextContainer {
+  display: flex;
+  padding: 2em;
+  align-items: center;
+  font-size: 1.2em;
+  text-align: justify;
+  margin: 25px;
+  background-color: cadetblue;
+  border-radius: 5px;
+
+  img {
+    width: 150px;
+    padding: 20px;
+  }
+}

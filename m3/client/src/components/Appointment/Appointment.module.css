@@ -1,0 +1,23 @@
+.appointmentCard {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 200px;
+    margin: 15px;
+    width: 300px;
+  }
+  
+  .activeButton {
+    background-color: green;
+    color: white;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .cancelledButton {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+  }

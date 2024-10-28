@@ -15,12 +15,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const data_source_1 = require("./config/data-source");
 const envs_1 = require("./config/envs");
 const server_1 = __importDefault(require("./server"));
-// Función asincrónica para inicializar la base de datos y el servidor
+const loadTestAppointment_1 = require("./utils/loadTestAppointment");
+const loadTestUser_1 = require("./utils/loadTestUser");
 const startServer = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         // Inicializar conexión a la base de datos
         yield data_source_1.AppDataSource.initialize();
         console.log("✅ Database connected successfully");
+        yield (0, loadTestUser_1.loadTestUsers)();
+        yield (0, loadTestAppointment_1.loadTestAppointment)();
         // Iniciar el servidor
         server_1.default.listen(envs_1.PORT, () => {
             console.log(`🚀 Server running on port ${envs_1.PORT}`);
@@ -28,9 +31,12 @@ const startServer = () => __awaiter(void 0, void 0, void 0, function* () {
     }
     catch (error) {
         // Registro estructurado del error
-        console.error("❌ Failed to initialize the application:", error);
-        // Forzar salida del proceso en caso de error crítico
-        process.exit(1); // Código de salida 1 indica error
+        console.error("❌ Failed to initialize the database:", error);
+        // Intentar reconectar a la base de datos después de un tiempo
+        setTimeout(() => __awaiter(void 0, void 0, void 0, function* () {
+            console.log("🔄 Retrying database connection...");
+            yield startServer(); // Reintento
+        }), 5000); // Espera de 5 segundos antes de reintentar
     }
 });
 // Ejecutar la función de inicio del servidor

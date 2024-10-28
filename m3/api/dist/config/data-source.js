@@ -1,11 +1,14 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppDataSource = void 0;
+exports.appointmentModel = exports.credentialModel = exports.userModel = exports.AppDataSource = void 0;
 const typeorm_1 = require("typeorm");
 const envs_1 = require("./envs");
-// import User from "../entities/User"
-// import Credential from "../entities/Credential"
-// import Appointment from "../entities/Appointment"
+const User_1 = __importDefault(require("../entities/User"));
+const Appointment_1 = __importDefault(require("../entities/Appointment"));
+const Credential_1 = __importDefault(require("../entities/Credential"));
 exports.AppDataSource = new typeorm_1.DataSource({
     type: "postgres",
     host: envs_1.DB_HOST || "localhost",
@@ -14,12 +17,12 @@ exports.AppDataSource = new typeorm_1.DataSource({
     password: envs_1.DB_PASS,
     database: envs_1.DB_NAME,
     synchronize: true,
-    // dropSchema: true,
+    dropSchema: true,
     logging: ["error"],
-    entities: [],
+    entities: [User_1.default, Appointment_1.default, Credential_1.default],
     subscribers: [],
     migrations: [],
 });
-// export const userModel = AppDataSource.getRepository(User)
-// export const credentialModel = AppDataSource.getRepository(Credential)
-// export const appointmentModel = AppDataSource.getRepository(Appointment)
+exports.userModel = exports.AppDataSource.getRepository(User_1.default);
+exports.credentialModel = exports.AppDataSource.getRepository(Credential_1.default);
+exports.appointmentModel = exports.AppDataSource.getRepository(Appointment_1.default);
