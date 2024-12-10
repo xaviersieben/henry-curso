@@ -15,7 +15,7 @@ const server: Application = express();
 
 // Configurar CORS de forma segura
 const corsOptions: CorsOptions = {
-  origin: process.env.CLIENT_URL || "http://localhost:5173",
+  origin: process.env.CLIENT_URL || "http://localhost:3000",
   optionsSuccessStatus: 200,
   credentials: true,
 };

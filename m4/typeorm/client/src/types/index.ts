@@ -19,3 +19,48 @@ export interface SliderProps {
 export interface ICategory {
   name: string;
 }
+
+export interface userSession {
+  token: string;
+  userData: {
+    email: string;
+    id: number;
+    password: string;
+    name: string;
+    address: string;
+    phone: string;
+  };
+}
+
+export interface LoginErrorsProps {
+  email?: string;
+  password?: string;
+}
+
+export interface LoginProps {
+  email: string;
+  password: string;
+}
+
+export interface RegisterErrorsProps {
+  email?: string;
+  password?: string;
+  name?: string;
+  address?: string;
+  phone?: string;
+}
+
+export interface RegisterProps {
+  email: string;
+  password: string;
+  name: string;
+  address: string;
+  phone: string;
+}
+
+export interface IOrders {
+  id: number;
+  status: string;
+  date: Date;
+  products: IProduct[];
+}

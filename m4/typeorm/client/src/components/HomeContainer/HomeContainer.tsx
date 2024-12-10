@@ -6,7 +6,6 @@ import announce from "@/helpers/Publicity";
 import topRating from "@/helpers/TopRating";
 import { getProducts } from "@/services/products.services";
 
-
 const HomeContainer = async () => {
   try {
     const products = await getProducts();
@@ -26,7 +25,9 @@ const HomeContainer = async () => {
     );
   } catch (error) {
     console.error("Error rendering HomeContainer:", error);
-    return <p className="text-center text-red-500">Error cargando los datos.</p>;
+    return (
+      <p className="text-center text-red-500">Error cargando los datos.</p>
+    );
   }
 };
 
